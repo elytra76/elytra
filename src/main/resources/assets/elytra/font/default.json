@@ -1,0 +1,15 @@
+{
+  "providers": [
+    { "type": "reference", "id": "minecraft:include/space" },
+    {
+      "type": "bitmap",
+      "file": "elytra:font/digits.png",
+      "height": 12,
+      "ascent": 9,
+      "chars": ["0123456789"]
+    },
+    { "type": "ttf", "file": "elytra:mochi-boom.ttf", "size": 11.0, "oversample": 2 },
+    { "type": "ttf", "file": "elytra:ubuntu-medium.ttf", "size": 11.0, "oversample": 2 },
+    { "type": "reference", "id": "minecraft:include/unifont" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "elytra",
+  "version": "${version}",
+  "name": "Elytra Client",
+  "description": "A translucent pink click GUI for Minecraft, built on Dear ImGui. Module registry ships empty.",
+  "icon": "assets/elytra/icon.png",
+  "authors": [
+    "Elytra"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.elytra.client.ElytraClient"
+    ]
+  },
+  "mixins": [
+    "elytra.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.elytra.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "WindowMixin",
+    "TitleScreenMixin",
+    "ScreenMixin",
+    "PressableWidgetMixin",
+    "FontMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
