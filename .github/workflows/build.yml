@@ -1,0 +1,27 @@
+name: Build
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+
+      # Your gradle.properties points at a Windows path on your PC; drop it on the runner.
+      - name: Remove local JDK path
+        run: sed -i '/^org.gradle.java.home=/d' gradle.properties
+
+      - run: chmod +x gradlew
+      - run: ./gradlew build --console=plain
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: elytra-client
+          path: build/libs/elytra-client-*.jar
